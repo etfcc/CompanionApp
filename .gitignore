@@ -1,5 +1,7 @@
 *.xcworkspace
 .DS_Store
+Build*
+CompanionApp.xcodeproj/xcshareddata*
 
 # Prerequisites
 *.d
