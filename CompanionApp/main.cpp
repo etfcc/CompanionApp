@@ -20,14 +20,13 @@ int main(int argc, char** argv)
         try
         {
             Elgato el;
-            while (el.devices().size()==0)
+            do
             {
                 std::cout<<"refreshing Elgato devices ..."<<std::endl;
                 el.refresh();
-            }
-            std::cout<<"found "<<el.devices().size()<<" device(s)"<<std::endl;
-            for (int i=0;i<el.devices().size();i++)
-                std::cout<<"\t"<<el.devices()[i]<<std::endl;
+            } while (el.light().address=="");
+            std::cout<<"found light @"<<el.light().address<<std::endl;
+                
             LibVoipEvents lib;
             std::cout<<"waiting for FCC events ..."<<std::endl;
             while(1)
@@ -35,17 +34,18 @@ int main(int argc, char** argv)
                 LibVoipEvents::Event event=lib.read();
                 if (event.type()==LibVoipEvents::Event::TIMEOUT)
                 {
-                    if (el.getOnTS()!=0 && (unsigned long)time(NULL)-el.getOnTS()>7200) //2h
+                    el.refresh_status();
+                    if (el.light().status==1 && (unsigned long)time(NULL)-el.light().status_change_ts>20)
                     {
                         std::cout<<"Turning light on the timeout"<<std::endl;
-                        el.lights(false);
-                    } 
+                        el.switch_light(false);
+                    }
                 }
                 else if (event.type()==LibVoipEvents::Event::CAMERA && event.payload_size()==1)
                 {
                     bool bOn=*event.payload()==1;
                     std::cout<<"Camera is "<<(bOn?"ON":"OFF")<<std::endl;
-                    el.lights(bOn);
+                    el.switch_light(bOn);
                 }
             }
         }

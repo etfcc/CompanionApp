@@ -34,6 +34,8 @@
 		C25DAD4325978C7B00C88C2A /* zeroconf-util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "zeroconf-util.hpp"; sourceTree = "<group>"; };
 		C25DAD4425978C7B00C88C2A /* zeroconf-detail.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "zeroconf-detail.hpp"; sourceTree = "<group>"; };
 		C25DAD4525978C7B00C88C2A /* zeroconf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = zeroconf.hpp; sourceTree = "<group>"; };
+		C2DCC6322599475A00DCA99F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../Projects/CompanionApp/LICENSE; sourceTree = "<group>"; };
+		C2DCC6332599476300DCA99F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../Projects/CompanionApp/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,8 @@
 		C212D5002597801000916AEA = {
 			isa = PBXGroup;
 			children = (
+				C2DCC6332599476300DCA99F /* README.md */,
+				C2DCC6322599475A00DCA99F /* LICENSE */,
 				C25DAD3A25978BBF00C88C2A /* fcc */,
 				C25DAD3625978B6C00C88C2A /* elgato */,
 				C212D50B2597801000916AEA /* CompanionApp */,
