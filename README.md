@@ -24,7 +24,7 @@ This is a console applciation that can be run by launchd on Mac to sit on the ba
 Put the followng file to 
 <pre>~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist</pre>
 
-<myxml>
+```xml
  <?xml version="1.0" encoding="UTF-8"?>
  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
  <plist version="1.0">
@@ -39,7 +39,7 @@ Put the followng file to
      <string>PATH/CompanionApp</string>
    </dict>
  </plist>
-<myxml>
+```
  
  
    
