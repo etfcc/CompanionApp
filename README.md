@@ -9,7 +9,7 @@ You want your external light to go ON when you join to a video call and OFF when
 You want certain script to run after you finished your 9am meeting? 
 
 ## Solution:
-FCC desktop app fires an AF_UNIX datagram  upon certain event. Currently it only supports CAMERA ON|OFF events. Request more <HERE>.
+FCC desktop app fires an AF_UNIX datagram  upon certain event. Currently it only supports CAMERA ON|OFF events. Request more |HERE|.<br>
 Event has the following format :
 <pre>
 [version 1 byte ] [ type 1 byte ] [ payload size  2 bytes ] [ payload ... ] 
@@ -24,7 +24,7 @@ This is a console applciation that can be run by launchd on Mac to sit on the ba
 Put the followng file to 
 <pre>~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist</pre>
 
- <pre>
+<myxml>
  <?xml version="1.0" encoding="UTF-8"?>
  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
  <plist version="1.0">
@@ -39,8 +39,7 @@ Put the followng file to
      <string>PATH/CompanionApp</string>
    </dict>
  </plist>
- ~        
- </pre>
+<myxml>
  
  
    
