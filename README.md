@@ -40,7 +40,7 @@ Put the followng file to
  </plist>
 ```
 to load the configuration
-<pre>launchctl load ~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist</pre>
+>launchctl load ~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist
 
  
  
