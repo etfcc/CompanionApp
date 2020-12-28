@@ -16,8 +16,7 @@ Event has the following format :
 </pre>
 
 ## Implementation:
-This particular demo turns ON/OFF external light https://www.elgato.com/en/gaming/key-light when FCC application turns its camera ON/OFF.  
-To find the address of the light I used zeroconf project from here https://github.com/yvz/zeroconf
+This particular demo turns ON/OFF external light https://www.elgato.com/en/gaming/key-light when FCC application turns its camera ON/OFF. To find the address of the light I used zeroconf project from here https://github.com/yvz/zeroconf
 
 ## Deployment:
 This is a console applciation that can be run by launchd on Mac to sit on the background. 
@@ -40,6 +39,9 @@ Put the followng file to
    </dict>
  </plist>
 ```
+to load the configuration
+<pre>launchctl load ~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist</pre>
+
  
  
    
