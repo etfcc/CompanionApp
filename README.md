@@ -39,8 +39,7 @@ Put the followng file to
    </dict>
  </plist>
 ```
-to load the configuration
->launchctl load ~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist
+to load the configuration '''launchctl load ~/Library/LaunchAgents/com.freeconferencecall.companionapp.plist'''
 
  
  
