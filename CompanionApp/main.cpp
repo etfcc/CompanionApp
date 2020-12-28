@@ -35,7 +35,7 @@ int main(int argc, char** argv)
                 if (event.type()==LibVoipEvents::Event::TIMEOUT)
                 {
                     el.refresh_status();
-                    if (el.light().status==1 && (unsigned long)time(NULL)-el.light().status_change_ts>20)
+                    if (el.light().status==1 && (unsigned long)time(NULL)-el.light().status_change_ts>7200) //2h
                     {
                         std::cout<<"Turning light on the timeout"<<std::endl;
                         el.switch_light(false);
